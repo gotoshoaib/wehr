@@ -1,0 +1,85 @@
+// LAYOUT
+
+@function spacing($amount) {
+    @return ($amount * 8) + px;
+}
+  
+
+  
+  @mixin for-safari-only {
+    @supports (-webkit-hyphens: none) {
+      @content;
+    }
+  }
+  
+  @mixin for-ios-only {
+    @supports (-webkit-touch-callout: none) {
+      @content;
+    }
+  }
+
+  // this might be temporary - taken from scaling header
+$break-to-mobile: 1024px;
+$br-layout: 1200px;
+$break-to-tiny-mobile: 360px; // weird value, but since design is done on 360px width screen, this can be used for everything smaller than that
+$br-desktop: 1440px;
+$break-to-laptop: 1278px;
+$small-width: 750px;
+
+// TYPOGRAPHY
+
+$primary-font-family: 'Poppins', sans-serif;
+$secondary-font-family: 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+
+// FONT-SIZE RULES
+
+$font-size-l: 48px;
+$font-size-m: 14px;
+$font-size-xm: 15px;
+$font-size-sm: 13px;
+$font-size-s: 12px;
+$font-size-xs: 11px;
+$font-size-xxs: 10px;
+$font-size-section-title: 40px;
+
+$font-size-big-input: 26px;
+
+$font-size-expiry-time: 10px;
+
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 16px;
+$font-size-h6: 12px;
+
+
+//Colors
+
+$primary-color: #303030;
+$primary-subtitle-color: #686868;
+$main-color: #FF5151;
+$secondary-color: #FF9B6A;
+$tertiary-color: #161E54;
+$tertiary-dark-color: #1B204A;
+$white-color: #FFFFFF;
+$black-color: #000000;
+$sidebar-color: #FAFAFA;
+$border-gray-color: #F1F1F1;
+$navigation-icon-color: #B2B2B2;
+
+
+
+
+
+
+// BOX-SHADOWS
+
+$box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+  
